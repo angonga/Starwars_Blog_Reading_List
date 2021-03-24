@@ -8,15 +8,15 @@ export const Navbar = () => {
 	const [newFavorites, setNewFavorites] = useState();
 	const [counter, setCounter] = useState(0);
 
-	const addFavorites = () => {
-		if (newFavorites == "") {
-			alert("Enter your favorite character or planet");
-		} else {
-			setFavorites([...favorites, { label: "", done: false }]);
-			setNewFavorites("");
-			setCounter(counter + 1);
-		} //cierra el else
-	}; //cierra agregar
+	//const addFavorites = () => {
+	//	if (newFavorites == "") {
+	//		alert("Enter your favorite character or planet");
+	//	} else {
+	//		setFavorites([...favorites, { label: "", done: false }]);
+	//		setNewFavorites("");
+	//		setCounter(counter + 1);
+	//	} //cierra el else
+	//}; //cierra agregar
 
 	/*const deleteFavorites = i => {
 		const newFavorites = [...favorites];
@@ -37,15 +37,7 @@ export const Navbar = () => {
 			</Link>
 			<div className="ml-auto">
 				<div className="dropdown">
-					<button
-						className="btn btn-primary dropdown-toggle"
-						type="button"
-						id="dropdownMenuButton"
-						data-toggle="dropdown"
-						onClick={addFavorites}>
-						{" "}
-						Favorites
-					</button>
+					<button className="btn btn-primary dropdown-toggle">Favorites</button>
 					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						{store.favorites.map((element, i) => {
 							return (

@@ -10,10 +10,10 @@ export const PeopleDetailed = props => {
 	return (
 		<div className="jumbotron">
 			<h1 className="display-4"> {store.people[params.theid].name}</h1> <hr className="my-4" />
-			<div className="card mb-3" style={{ maxWidth: "540px;" }}>
+			<div className="card mb-3" style={{ maxWidth: "5cm;" }}>
 				<div className="row g-0">
 					<div className="col-md-4">
-						<img src="..." alt="..." />
+						<img src="https://via.placeholder.com/800x600" style={{ width: "5cm" }} alt="..." />
 					</div>
 					<div className="col-md-8">
 						<div className="card-body">
@@ -29,7 +29,7 @@ export const PeopleDetailed = props => {
 					</div>
 				</div>
 			</div>
-			<div className="container">
+			<div className="container" style={{ height: "2cm", padding: "0.5cm" }}>
 				<div className="row">
 					<div className="col-sm-2">
 						<strong>Name: </strong>
@@ -45,12 +45,14 @@ export const PeopleDetailed = props => {
 					</div>
 					<div className="col-sm-2">
 						<strong>Height: </strong>
+						{store.people[params.theid].height}
 					</div>
 					<div className="col-sm-2">
 						<strong>Skin Color: </strong>
+						{store.people[params.theid].skin_color}
 					</div>
 					<div className="col-sm-2">
-						<strong>Eye Color</strong>
+						<strong>Eye Color:</strong>
 						{store.people[params.theid].eye_color}
 					</div>
 				</div>

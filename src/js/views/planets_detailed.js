@@ -29,7 +29,34 @@ export const PlanetsDetailed = () => {
 					</div>
 				</div>
 			</div>
-
+			<div className="container">
+				<div className="row">
+					<div className="col-sm-2">
+						<strong>Name: </strong>
+						{store.planets[params.theid].name}
+					</div>
+					<div className="col-sm-2">
+						<strong>Climate: </strong>
+						{store.planets[params.theid].climate}
+					</div>
+					<div className="col-sm-2">
+						<strong>Population: </strong>
+						{store.planets[params.theid].population}
+					</div>
+					<div className="col-sm-2">
+						<strong>Orbital_Period: </strong>
+						{store.planets[params.theid].orbital_period}
+					</div>
+					<div className="col-sm-2">
+						<strong>Rotation_Period</strong>
+						{store.planets[params.theid].rotation_period}
+					</div>
+					<div className="col-sm-2">
+						<strong>Diameter: </strong>
+						{store.planets[params.theid].diameter}
+					</div>
+				</div>
+			</div>
 			<Link to="/">
 				<span className="btn btn-primary btn-lg" href="#" role="button">
 					Back home

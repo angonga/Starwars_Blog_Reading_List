@@ -29,7 +29,9 @@ export function People() {
 										Learn More!
 									</Link>
 									<button
-										onClick={() => actions.addName(element.name)}
+										onClick={() => {
+											alert("ya casi lo logramos jaja");
+										}}
 										type="button"
 										className="btn btn-outline-warning float-right">
 										<i className="far fa-heart" />
