@@ -50,17 +50,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ planets: planetsArray });
 					});
 			},
-
-			deleteFavorites: index => {
-				const favorites = getStore().favorites;
-				favorites.splice(index, 1);
-				setStore({ favorites: [...favorites] });
-			}, //ESTO LO AGREGUÉ PARA EL BOTÓN DEL CORAZÓN //},
-
-			addName: name => {
+			addFavorites: (nombre, tipo) => {
 				const store = getStore();
-				store.favorites.push(name);
-				setStore({ favorites: [...store.favorites] });
+				const favorites = [...store.favorites, { name: nombre, type: tipo }];
+				setStore({ favorites });
+				console.log(store.favorites);
 			},
 
 			changeColor: (index, color) => {

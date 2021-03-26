@@ -29,7 +29,7 @@ export function Planets() {
 										Learn More!
 									</Link>
 									<button
-										onClick={() => actions.addName(element.name)}
+										onClick={() => actions.addName(element.name, "planeta")}
 										type="button"
 										className="btn btn-outline-warning float-right">
 										<i className="far fa-heart" />
