@@ -57,6 +57,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ favorites: [...favoritos] });
 			},
 
+			deleteFavorites: index => {
+				const favorites = getStore().favorites;
+				favorites.splice(index, 1);
+				setStore({ favorites: [...favorites] });
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 
