@@ -16,7 +16,11 @@ export function People() {
 							<div
 								key={index}
 								className="card col-4 card-img-top"
-								style={{ width: "3cm", padding: "0.5cm", margin: "0.5cm" }}>
+								style={{
+									width: "3cm",
+									padding: "0.5cm",
+									margin: "0.5cm"
+								}}>
 								<img src="https://via.placeholder.com/400x200" className="card-img-top" alt="..." />
 								<div className="card-body">
 									<h5 className="card-title">{element.name}</h5>
@@ -29,7 +33,7 @@ export function People() {
 										Learn More!
 									</Link>
 									<button
-										onClick={() => actions.addName(element.name, "persona")}
+										onClick={() => actions.addFavorites(element.name, "persona")}
 										type="button"
 										className="btn btn-outline-warning float-right">
 										<i className="far fa-heart" />

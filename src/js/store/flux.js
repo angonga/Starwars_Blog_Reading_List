@@ -50,11 +50,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ planets: planetsArray });
 					});
 			},
+
 			addFavorites: (nombre, tipo) => {
-				const store = getStore();
-				const favorites = [...store.favorites, { name: nombre, type: tipo }];
-				setStore({ favorites });
-				console.log(store.favorites);
+				let favoritos = getStore().favorites;
+				favoritos = favoritos.concat({ name: nombre, type: tipo });
+				setStore({ favorites: [...favoritos] });
 			},
 
 			changeColor: (index, color) => {

@@ -23,14 +23,13 @@ export const Navbar = () => {
 			<Dropdown isOpen={dropdownOpen} toggle={toggle}>
 				<DropdownToggle caret>Dropdown</DropdownToggle>
 				<DropdownMenu>
-					{!!store.favorites &&
-						store.favorites.map((element, i) => {
-							return (
-								<li key={i}>
-									<DropdownItem>{element.name}</DropdownItem>
-								</li>
-							);
-						})}
+					{store.favorites.map((element, i) => {
+						return (
+							<li key={i}>
+								<DropdownItem>{element.name}</DropdownItem>
+							</li>
+						);
+					})}
 				</DropdownMenu>
 			</Dropdown>
 		</nav>

@@ -11,13 +11,13 @@ export const Home = () => {
 		<div className="todo" style={{ backgroundImage: `url("https://wallpaperaccess.com/full/39608.jpg")` }}>
 			<div className="container ">
 				<h1 style={{ paddingTop: "0.7cm" }}>Characters</h1>
-				<div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
+				<div className="scrolling-wrapper ">
 					<div>
 						<People />
 					</div>
 				</div>
 				<h1 style={{ paddingTop: "0.7cm" }}>Planets </h1>
-				<div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
+				<div className="scrolling-wrapper">
 					<div>
 						<Planets />
 					</div>
