@@ -15,13 +15,17 @@ export function People() {
 						return (
 							<div
 								key={index}
-								className="card col-4 card-img-top"
+								className="card col-4 card-img-top text-white bg-dark"
 								style={{
 									width: "3cm",
 									padding: "0.5cm",
 									margin: "0.5cm"
 								}}>
-								<img src="https://via.placeholder.com/400x200" className="card-img-top" alt="..." />
+								<img
+									src="https://pm1.narvii.com/6211/943cf27fa773d5da8addbabc3a0c27476cd6a255_hq.jpg"
+									className="card-img-top"
+									alt="..."
+								/>
 								<div className="card-body">
 									<h5 className="card-title">{element.name}</h5>
 									<ul className="characters">

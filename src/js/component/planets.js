@@ -15,9 +15,13 @@ export function Planets() {
 						return (
 							<div
 								key={index}
-								className="card col-4 card-img-top"
+								className="card col-4 card-img-top text-white bg-dark"
 								style={{ width: "3cm", padding: "0.5cm", margin: "0.5cm" }}>
-								<img src="https://via.placeholder.com/400x200" className="card-img-top" alt="..." />
+								<img
+									src="https://i.pinimg.com/originals/72/76/16/727616fdc990d43935ce284c695000d0.jpg"
+									className="card-img-top"
+									alt="..."
+								/>
 								<div className="card-body">
 									<h5 className="card-title">{element.name}</h5>
 									<ul className="planets">
