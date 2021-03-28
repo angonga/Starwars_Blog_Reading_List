@@ -20,8 +20,8 @@ export const Navbar = () => {
 				/>
 			</Link>
 
-			<Dropdown isOpen={dropdownOpen} toggle={toggle} title={store.favorites.length}>
-				<DropdownToggle caret>Favorites</DropdownToggle>
+			<Dropdown className="mx-5" isOpen={dropdownOpen} toggle={toggle}>
+				<DropdownToggle caret>Favorites {store.favorites.length}</DropdownToggle>
 				<DropdownMenu>
 					{store.favorites.map((element, i) => {
 						return (

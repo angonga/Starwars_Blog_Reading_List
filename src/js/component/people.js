@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 //import { useParams } from "react-router-dom";//
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import people_img from "../component/people_img";
 
 export function People() {
 	const { store, actions } = useContext(Context);
@@ -21,11 +22,7 @@ export function People() {
 									padding: "0.5cm",
 									margin: "0.5cm"
 								}}>
-								<img
-									src="https://pm1.narvii.com/6211/943cf27fa773d5da8addbabc3a0c27476cd6a255_hq.jpg"
-									className="card-img-top"
-									alt="..."
-								/>
+								<img src={people_img[element.name]} className="card-img-top" alt="..." />
 								<div className="card-body">
 									<h5 className="card-title">{element.name}</h5>
 									<ul className="characters">
