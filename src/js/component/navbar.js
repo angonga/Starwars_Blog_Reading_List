@@ -14,8 +14,8 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link className="navbar-brand" to="/">
 				<img
-					src="https://1000marcas.net/wp-content/uploads/2019/12/Star-Wars-Logo.png"
-					width="90px"
+					src="https://png.pngitem.com/pimgs/s/341-3413907_star-wars-logo-black-and-white-hd-png.png"
+					width="150px"
 					style={{ background: "#f8f9ed" }}
 				/>
 			</Link>

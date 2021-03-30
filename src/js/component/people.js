@@ -15,6 +15,39 @@ export function People() {
 					{store.people.map((element, index) => {
 						return (
 							<div
+								className="card text-white bg-dark"
+								style={{ width: "18rem", marginRight: "10px" }}
+								key={index}>
+								<img className="card-img-top" src={people_img[element.name]} alt="Card image cap" />
+								<div className="card-body">
+									<h5 className="card-title">{element.name}</h5>
+									<p className="card-text">
+										<ul className="characters">
+											<li>Gender: {element.gender}</li>
+											<li>Eye color: {element.eye_color}</li>
+											<li>Hair color: {element.hair_color}</li>
+										</ul>
+									</p>
+									<Link to={"/people_detailed/" + index} className="btn btn-outline-primary">
+										Learn More!
+									</Link>
+									<button
+										onClick={() => actions.addFavorites(element.name, "persona")}
+										type="button"
+										className="btn btn-outline-warning float-right">
+										<i className="far fa-heart" />
+									</button>
+								</div>
+							</div>
+						);
+					})}
+				</div>
+			</div>
+		</div>
+	);
+}
+
+/*							<div
 								key={index}
 								className="card col-4 card-img-top text-white bg-dark"
 								style={{
@@ -40,11 +73,4 @@ export function People() {
 										<i className="far fa-heart" />
 									</button>
 								</div>
-							</div>
-						);
-					})}
-				</div>
-			</div>
-		</div>
-	);
-}
+							</div>*/

@@ -15,17 +15,19 @@ export function Planets() {
 					{store.planets.map((element, index) => {
 						return (
 							<div
-								key={index}
-								className="card col-4 card-img-top text-white bg-dark"
-								style={{ width: "3cm", padding: "0.5cm", margin: "0.5cm" }}>
-								<img src="{planets_img[element.name]}" className="card-img-top" alt="..." />
+								className="card text-white bg-dark"
+								style={{ width: "18rem", marginRight: "10px" }}
+								key={index}>
+								<img className="card-img-top" src={planets_img[element.name]} alt="Card image cap" />
 								<div className="card-body">
 									<h5 className="card-title">{element.name}</h5>
-									<ul className="planets">
-										<li>Diameter: {element.diameter}</li>
-										<li>Gravity: {element.gravity}</li>
-										<li>Terrain: {element.terrain}</li>
-									</ul>
+									<p className="card-text">
+										<ul className="planets">
+											<li>Diameter: {element.diameter}</li>
+											<li>Gravity: {element.gravity}</li>
+											<li>Terrain: {element.terrain}</li>
+										</ul>
+									</p>
 									<Link to={"/planets_detailed/" + index} className="btn btn-outline-primary">
 										Learn More!
 									</Link>
