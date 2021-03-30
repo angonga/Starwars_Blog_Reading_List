@@ -53,8 +53,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addFavorites: (nombre, tipo) => {
 				let favoritos = getStore().favorites;
-				favoritos = favoritos.concat({ name: nombre, type: tipo });
-				setStore({ favorites: [...favoritos] });
+				let nameArray = favoritos.map(obj => obj.name);
+				nameArray.includes(nombre)
+					? setStore({ favorites: favoritos })
+					: setStore({ favorites: favoritos.concat({ name: nombre, type: tipo }) });
 			},
 
 			deleteFavorites: index => {
