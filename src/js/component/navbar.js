@@ -28,7 +28,10 @@ export const Navbar = () => {
 							<li key={i}>
 								<DropdownItem>
 									{element.name}
-									<button className="remove" onClick={() => actions.deleteFavorites(i)}>
+									<button
+										className="remove"
+										style={{ marginLeft: "10px" }}
+										onClick={() => actions.deleteFavorites(i)}>
 										<i className="fas fa-trash" />
 									</button>
 								</DropdownItem>
